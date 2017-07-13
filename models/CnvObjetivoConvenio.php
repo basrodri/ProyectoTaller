@@ -12,7 +12,6 @@ use Yii;
  * @property string $TEXTO_OBJETIVO
  * @property string $VIGENTE
  *
- 
  * @property CnvConvenio $iDCONVENIO
  */
 class CnvObjetivoConvenio extends \yii\db\ActiveRecord

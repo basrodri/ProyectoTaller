@@ -21,7 +21,6 @@ use Yii;
  * @property string $VIGENTE
  * @property integer $VIGENCIA
  *
- 
  * @property CnvActividadConvenio[] $cnvActividadConvenios
  * @property CnvEstadoConvenio $iDESTADOCONVENIO
  * @property CnvCoordinadorConvenio $iDCOORDINADORCONVENIO

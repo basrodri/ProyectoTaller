@@ -19,7 +19,6 @@ use Yii;
  * @property string $EMAIL
  * @property integer $ID_INSTITUCION
  *
- 
  * @property CnvConvenio[] $cnvConvenios
  */
 class CnvCoordinadorConvenio extends \yii\db\ActiveRecord

@@ -12,7 +12,6 @@ use Yii;
  * @property string $DESCRIPCION
  * @property string $VIGENTE
  *
- 
  * @property CnvConvenio[] $cnvConvenios
  */
 class CnvEstadoConvenio extends \yii\db\ActiveRecord
