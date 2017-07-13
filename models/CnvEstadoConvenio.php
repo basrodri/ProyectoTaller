@@ -10,7 +10,6 @@ use Yii;
  * @property integer $ID_ESTADO_CONVENIO
  * @property string $NOMBRE_ESTADO_CONVENIO
  * @property string $DESCRIPCION
- * @property string $VIGENTE
  *
  * @property CnvConvenio[] $cnvConvenios
  */
@@ -34,7 +33,6 @@ class CnvEstadoConvenio extends \yii\db\ActiveRecord
             [['ID_ESTADO_CONVENIO'], 'integer'],
             [['NOMBRE_ESTADO_CONVENIO'], 'string', 'max' => 200],
             [['DESCRIPCION'], 'string', 'max' => 500],
-            [['VIGENTE'], 'string', 'max' => 1],
         ];
     }
 
@@ -47,7 +45,6 @@ class CnvEstadoConvenio extends \yii\db\ActiveRecord
             'ID_ESTADO_CONVENIO' => 'Id  Estado  Convenio',
             'NOMBRE_ESTADO_CONVENIO' => 'Nombre  Estado  Convenio',
             'DESCRIPCION' => 'Descripcion',
-            'VIGENTE' => 'Vigente',
         ];
     }
 
