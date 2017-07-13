@@ -18,6 +18,7 @@ use Yii;
  * @property string $DESCRIPCION
  * @property string $VIGENTE
  *
+ 
  * @property CnvConvenio $iDCONVENIO
  */
 class CnvActividadConvenio extends \yii\db\ActiveRecord
