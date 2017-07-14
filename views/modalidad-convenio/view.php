@@ -7,10 +7,10 @@ use yii\widgets\DetailView;
 /* @var $model app\models\CnvModalidadConvenio */
 
 $this->title = $model->ID_MODALIDAD_CONVENIO;
-$this->params['breadcrumbs'][] = ['label' => 'Cnv Modalidad Convenios', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Universidad de Macondo - Modalidad Convenios', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="cnv-modalidad-convenio-view">
+<div class= " universidad de macondo modalidad-convenio">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
