@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\bootstrap\Modal;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\CnvActividadConvenioSearch */
@@ -18,6 +19,21 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Crear Actividad Convenio', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
+ <?php 
+        Modal::begin([
+            'header' => '<h2> Actividad Convenio</h2>',
+            'toggleButton' => ['label' => 'click me'],
+
+        ]);
+
+        //echo 'Say hello...';
+
+
+        Modal::end();
+             ?>
+
+
+
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
