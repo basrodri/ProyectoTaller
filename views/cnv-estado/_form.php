@@ -23,7 +23,7 @@ use dosamigos\ckeditor\CKEditor;
 			]) ?>
 			
 
-    <?= $form->field($model, 'VIGENTE')->dropDownList(['s'=>'S','n'=>'N']) ?>
+    <?= $form->field($model, 'VIGENTE')->dropDownList(['S'=>'S','N'=>'N']) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

@@ -20,6 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::button('Create Cnv Estado Convenio', ['value'=>Url::to('index.php?r=cnv-estado/create'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
     </p>
+    
     <?php 
         Modal::begin([
             'header' => '<h2>Crear Estado</h2>',
