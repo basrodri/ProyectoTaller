@@ -31,14 +31,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'ID_COORDINADOR_CONVENIO',
             'RUT_COORDINADOR_CONVENIO',
             'NOMBRE_COORDINADOR_CONVENIO',
-            'DV_COORDINADOR_CONVENIO',
             'FECHA_INICIO',
             'FECHA_FIN',
-            'VIGENTE',
-            'ESEXTERNO',
             'UNIDAD_ACADEMICA',
             'EMAIL:email',
-            'ID_INSTITUCION',
         ],
     ]) ?>
 

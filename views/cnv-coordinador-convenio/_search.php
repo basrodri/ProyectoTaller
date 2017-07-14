@@ -21,21 +21,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'NOMBRE_COORDINADOR_CONVENIO') ?>
 
-    <?= $form->field($model, 'DV_COORDINADOR_CONVENIO') ?>
-
     <?= $form->field($model, 'FECHA_INICIO') ?>
 
-    <?php // echo $form->field($model, 'FECHA_FIN') ?>
-
-    <?php // echo $form->field($model, 'VIGENTE') ?>
-
-    <?php // echo $form->field($model, 'ESEXTERNO') ?>
+    <?= $form->field($model, 'FECHA_FIN') ?>
 
     <?php // echo $form->field($model, 'UNIDAD_ACADEMICA') ?>
 
     <?php // echo $form->field($model, 'EMAIL') ?>
-
-    <?php // echo $form->field($model, 'ID_INSTITUCION') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
