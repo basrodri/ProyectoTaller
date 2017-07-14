@@ -15,25 +15,17 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'ID_ESTADO_ACTIVIDAD') ?>
-
-    <?= $form->field($model, 'ID_TIPO_ACTIVIDAD') ?>
-
-    <?= $form->field($model, 'ID_RESPONSABLE_ACTIVIDAD') ?>
-
     <?= $form->field($model, 'FECHA_INICIO') ?>
 
     <?= $form->field($model, 'FECHA_FIN') ?>
 
-    <?php // echo $form->field($model, 'ID_ACTIVIDAD_CONVENIO') ?>
+    <?= $form->field($model, 'ID_ACTIVIDAD_CONVENIO') ?>
 
-    <?php // echo $form->field($model, 'ID_CONVENIO') ?>
+    <?= $form->field($model, 'ID_CONVENIO') ?>
 
-    <?php // echo $form->field($model, 'NOMBRE_ACTIVIDAD') ?>
+    <?= $form->field($model, 'NOMBRE_ACTIVIDAD') ?>
 
     <?php // echo $form->field($model, 'DESCRIPCION') ?>
-
-    <?php // echo $form->field($model, 'VIGENTE') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

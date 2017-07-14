@@ -40,7 +40,8 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Actividad', 'url' => ['/actividad/index'],'visible'=> Yii::$app->user->isGuest],
+           // ['options'=>['class'=>'dropdown-header']],
+            ['label' => 'Actividad Convenio', 'url' => ['/actividad/index'],'visible'=>!Yii::$app->user->isGuest],
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (

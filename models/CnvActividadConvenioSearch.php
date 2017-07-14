@@ -18,8 +18,8 @@ class CnvActividadConvenioSearch extends CnvActividadConvenio
     public function rules()
     {
         return [
-            [['ID_ESTADO_ACTIVIDAD', 'ID_TIPO_ACTIVIDAD', 'ID_ACTIVIDAD_CONVENIO', 'ID_CONVENIO'], 'integer'],
-            [['ID_RESPONSABLE_ACTIVIDAD', 'FECHA_INICIO', 'FECHA_FIN', 'NOMBRE_ACTIVIDAD', 'DESCRIPCION', 'VIGENTE'], 'safe'],
+            [['FECHA_INICIO', 'FECHA_FIN', 'NOMBRE_ACTIVIDAD', 'DESCRIPCION'], 'safe'],
+            [['ID_ACTIVIDAD_CONVENIO', 'ID_CONVENIO'], 'integer'],
         ];
     }
 
@@ -59,18 +59,14 @@ class CnvActividadConvenioSearch extends CnvActividadConvenio
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'ID_ESTADO_ACTIVIDAD' => $this->ID_ESTADO_ACTIVIDAD,
-            'ID_TIPO_ACTIVIDAD' => $this->ID_TIPO_ACTIVIDAD,
             'FECHA_INICIO' => $this->FECHA_INICIO,
             'FECHA_FIN' => $this->FECHA_FIN,
             'ID_ACTIVIDAD_CONVENIO' => $this->ID_ACTIVIDAD_CONVENIO,
             'ID_CONVENIO' => $this->ID_CONVENIO,
         ]);
 
-        $query->andFilterWhere(['like', 'ID_RESPONSABLE_ACTIVIDAD', $this->ID_RESPONSABLE_ACTIVIDAD])
-            ->andFilterWhere(['like', 'NOMBRE_ACTIVIDAD', $this->NOMBRE_ACTIVIDAD])
-            ->andFilterWhere(['like', 'DESCRIPCION', $this->DESCRIPCION])
-            ->andFilterWhere(['like', 'VIGENTE', $this->VIGENTE]);
+        $query->andFilterWhere(['like', 'NOMBRE_ACTIVIDAD', $this->NOMBRE_ACTIVIDAD])
+            ->andFilterWhere(['like', 'DESCRIPCION', $this->DESCRIPCION]);
 
         return $dataProvider;
     }
