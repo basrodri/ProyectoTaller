@@ -1,16 +1,13 @@
 <?php
-
 use yii\helpers\Html;
 use yii\grid\GridView;
-
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\CnvModalidadConvenioSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-
-$this->title = 'Universidad de Macondo - Modalidad Convenios';
+$this->title = 'Modalidad Convenios - Universidad de Macondo';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="cnv-modalidad-convenio-index">
+<div class="Index Modalidad Convenio">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -23,13 +20,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
+            'NOMBRE_MODALIDAD_CONVENIO',
             'ID_MODALIDAD_CONVENIO',
             'ID_CONVENIO',
-            'NOMBRE_MODALIDAD_CONVENIO',
+            
             'DESCRIPCION',
             'VIGENTE',
-
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

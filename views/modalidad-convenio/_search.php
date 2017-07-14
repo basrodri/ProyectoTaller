@@ -1,25 +1,23 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
 /* @var $this yii\web\View */
 /* @var $model app\models\CnvModalidadConvenioSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="cnv-modalidad-convenio-search">
+<div class="Busqueda Modalidad Convenio">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
         'method' => 'get',
     ]); ?>
-
+    <?= $form->field($model, 'NOMBRE_MODALIDAD_CONVENIO') ?>
     <?= $form->field($model, 'ID_MODALIDAD_CONVENIO') ?>
 
     <?= $form->field($model, 'ID_CONVENIO') ?>
 
-    <?= $form->field($model, 'NOMBRE_MODALIDAD_CONVENIO') ?>
+    
 
     <?= $form->field($model, 'DESCRIPCION') ?>
 
@@ -33,3 +31,4 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+

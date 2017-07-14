@@ -46,10 +46,10 @@ class CnvModalidadConvenio extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID_MODALIDAD_CONVENIO' => 'Id  Modalidad  Convenio',
-            'ID_CONVENIO' => 'Id  Convenio',
-            'NOMBRE_MODALIDAD_CONVENIO' => 'Nombre  Modalidad  Convenio',
-            'DESCRIPCION' => 'Descripcion',
+            'ID_MODALIDAD_CONVENIO' => 'Id Modalidad',
+            'ID_CONVENIO' => 'Id Convenio',
+            'NOMBRE_MODALIDAD_CONVENIO' => 'Nombre Modalidad',
+            'DESCRIPCION' => 'Descripción',
             'VIGENTE' => 'Vigente',
         ];
     }
