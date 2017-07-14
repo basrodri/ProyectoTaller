@@ -27,22 +27,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 
- <?php 
-        Modal::begin([
-            'header' => '<h2> Actividad Convenio</h2>',
-            'toggleButton' => ['class' => 'btn btn-success'],
-
-
-
-        ]);
-
-        //echo Url::toRoute('actividad/create');
-
-
-        Modal::end();
-             ?>
-
-
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
