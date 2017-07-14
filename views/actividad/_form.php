@@ -19,9 +19,39 @@ use dosamigos\datepicker\DatePicker;
 
     <?= $form->field($model, 'ID_RESPONSABLE_ACTIVIDAD')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'FECHA_INICIO')->textInput() ?>
+   <!-- <?= $form->field($model, 'FECHA_INICIO')->textInput() ?>-->
 
-    <?= $form->field($model, 'FECHA_FIN')->textInput() ?>
+                <?= $form->field($model, 'FECHA_INICIO')->widget(
+                    DatePicker::className(), [
+                        // inline too, not bad
+                         'inline' => false,
+                         'language' => 'es', 
+                         'options' => ['placeholder' => 'Selecione Fecha'],
+                         // modify template for custom rendering
+                        //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+                        'clientOptions' => [
+                            'autoclose' => true,
+                            'format' => 'yyyy-m-d'
+                        ]
+                ]);?>
+
+    <!-- <?= $form->field($model, 'FECHA_FIN')->textInput() ?>-->
+
+                    <?= $form->field($model, 'FECHA_FIN')->widget(
+                    DatePicker::className(), [
+                        // inline too, not bad
+                         'inline' => false,
+                         'language' => 'es', 
+                         'options' => ['placeholder' => 'Selecione Fecha'],
+                         // modify template for custom rendering
+                        //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+                        'clientOptions' => [
+                            'autoclose' => true,
+                            'format' => 'yyyy-m-d'
+                        ]
+                ]);?>
+
+                
 
     <?= $form->field($model, 'ID_ACTIVIDAD_CONVENIO')->textInput() ?>
 
