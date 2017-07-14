@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\bootstrap\Modal;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\CnvEstadoConvenioSearch */
@@ -16,8 +18,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Cnv Estado Convenio', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::button('Create Cnv Estado Convenio', ['value'=>Url::to('index.php?r=cnv-estado/create'),'class' => 'btn btn-success','id'=>'modalButton']) ?>
     </p>
+    <?php 
+        Modal::begin([
+            'header' => '<h2>Crear Estado</h2>',
+            'id' => 'modal',
+            'size' => 'modal-lg',
+        ]);
+
+        echo "<div id='modalContent'></div>";
+
+        Modal::end();
+    ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
