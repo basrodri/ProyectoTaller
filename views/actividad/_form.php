@@ -6,6 +6,7 @@ use dosamigos\datepicker\DatePicker;
 use yii\Helpers\ArrayHelper;
 use kartik\select2\Select2;
 use dosamigos\tinymce\TinyMce;
+use app\models\CnvConvenio;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\CnvActividadConvenio */
@@ -51,7 +52,6 @@ use dosamigos\tinymce\TinyMce;
    <!--  <?= $form->field($model, 'ID_ACTIVIDAD_CONVENIO')->textInput() ?> -->
 
     <?= $form->field($model, 'ID_CONVENIO')->textInput() ?>
-
 
 
     <?= $form->field($model, 'NOMBRE_ACTIVIDAD')->textInput(['maxlength' => true]) ?>
