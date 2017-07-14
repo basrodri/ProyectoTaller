@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\CnvActividadConvenio */
 
-$this->title = 'Actualizar Actividad Convenio: ' . $model->ID_ACTIVIDAD_CONVENIO;
+$this->title = 'Actualizar Actividad Convenio: ' . $model->NOMBRE_ACTIVIDAD;
 $this->params['breadcrumbs'][] = ['label' => 'Actividad Convenios', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->ID_ACTIVIDAD_CONVENIO, 'url' => ['view', 'id' => $model->ID_ACTIVIDAD_CONVENIO]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = ['label' => $model->NOMBRE_ACTIVIDAD, 'url' => ['view', 'id' => $model->ID_ACTIVIDAD_CONVENIO]];
+$this->params['breadcrumbs'][] = 'Actualizar';
 ?>
 <div class="cnv-actividad-convenio-update">
 

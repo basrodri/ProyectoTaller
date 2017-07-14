@@ -48,7 +48,7 @@ use dosamigos\tinymce\TinyMce;
                         ]
                 ]);?>
 
-    <?= $form->field($model, 'ID_ACTIVIDAD_CONVENIO')->textInput() ?>
+   <!--  <?= $form->field($model, 'ID_ACTIVIDAD_CONVENIO')->textInput() ?> -->
 
     <?= $form->field($model, 'ID_CONVENIO')->textInput() ?>
 

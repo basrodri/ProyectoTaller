@@ -3,6 +3,11 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\bootstrap\Modal;
+use yii\helpers\ArrayHelpers;
+use yii\web\UrlManager;
+use yii\helpers\BaseUrl;
+use yii\helpers\Url;
+
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\CnvActividadConvenioSearch */
@@ -19,14 +24,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Crear Actividad Convenio', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
+
+
+
  <?php 
         Modal::begin([
             'header' => '<h2> Actividad Convenio</h2>',
-            'toggleButton' => ['label' => 'click me'],
+            'toggleButton' => ['class' => 'btn btn-success'],
+
+
 
         ]);
 
-        //echo 'Say hello...';
+        //echo Url::toRoute('actividad/create');
 
 
         Modal::end();
