@@ -4,6 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+
     "content-hash": "866029464e28e8b91f2943957db9ed3b",
     "packages": [
         {
@@ -83,6 +84,7 @@
             },
             "require": {
                 "tinymce/tinymce": ">=4",
+
                 "yiisoft/yii2": "~2.0.0"
             },
             "require-dev": {
@@ -99,7 +101,9 @@
             },
             "autoload": {
                 "psr-4": {
+
                     "dosamigos\\tinymce\\": "src"
+
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -114,6 +118,7 @@
                     "role": "Developer"
                 }
             ],
+
             "description": "TinyMCE widget for Yii2.",
             "homepage": "http://yiiwheels.com/extension/tinymce-widget",
             "keywords": [
@@ -125,7 +130,9 @@
                 "yii 2",
                 "yii2"
             ],
+
             "time": "2017-06-09T14:12:14+00:00"
+
         },
         {
             "name": "bower-asset/bootstrap",
@@ -465,6 +472,7 @@
             "time": "2017-06-03T02:28:16+00:00"
         },
         {
+
             "name": "kartik-v/yii2-krajee-base",
             "version": "v1.8.8",
             "source": {
@@ -516,6 +524,7 @@
             "time": "2017-02-22T05:58:53+00:00"
         },
         {
+
             "name": "kartik-v/yii2-widget-datetimepicker",
             "version": "v1.4.4",
             "source": {
@@ -533,14 +542,18 @@
                 "kartik-v/yii2-krajee-base": "*"
             },
             "type": "yii2-extension",
+
             "autoload": {
                 "psr-4": {
                     "kartik\\datetime\\": ""
+
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
+
                 "BSD-3-Clause"
+
             ],
             "authors": [
                 {
@@ -549,6 +562,7 @@
                     "homepage": "http://www.krajee.com/"
                 }
             ],
+
             "description": "Enhanced Yii2 wrapper for the bootstrap datetimepicker plugin (sub repo split from yii2-widgets)",
             "homepage": "https://github.com/kartik-v/yii2-widget-datetimepicker",
             "keywords": [
@@ -584,12 +598,16 @@
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
+
                     "dev-master": "2.0.x-dev"
+
                 }
             },
             "autoload": {
                 "psr-4": {
+
                     "kartik\\select2\\": ""
+
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -603,6 +621,7 @@
                     "homepage": "http://www.krajee.com/"
                 }
             ],
+
             "description": "Enhanced Yii2 wrapper for the Select2 jQuery plugin (sub repo split from yii2-widgets).",
             "homepage": "https://github.com/kartik-v/yii2-widget-select2",
             "keywords": [
@@ -615,7 +634,9 @@
                 "widget",
                 "yii2"
             ],
+
             "time": "2017-06-21 11:33:04"
+
         },
         {
             "name": "swiftmailer/swiftmailer",
