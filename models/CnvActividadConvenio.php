@@ -29,6 +29,10 @@ class CnvActividadConvenio extends \yii\db\ActiveRecord
     {
         return [
             [['ID_CONVENIO'], 'required'],
+
+
+            [['ID_ESTADO_ACTIVIDAD', 'ID_ACTIVIDAD_CONVENIO', 'ID_CONVENIO'], 'integer'],
+
             [['FECHA_INICIO', 'FECHA_FIN'], 'safe'],
             [['NOMBRE_ACTIVIDAD'], 'string', 'max' => 200],
             [['DESCRIPCION'], 'string', 'max' => 500],

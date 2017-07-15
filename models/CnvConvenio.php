@@ -14,12 +14,9 @@ use Yii;
  * @property string $NOMBRE_CONVENIO
  * @property string $FECHA_INICIO
  * @property string $FECHA_TERMINO
- * @property string $FECHA_FIRMA
  * @property string $FECHA_DECRETO
  * @property integer $NUMERO_DECRETO
  * @property string $DESCRIPCION
- * @property string $VIGENTE
- * @property integer $VIGENCIA
  *
  * @property CnvActividadConvenio[] $cnvActividadConvenios
  * @property CnvEstadoConvenio $iDESTADOCONVENIO
@@ -43,12 +40,11 @@ class CnvConvenio extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['ID_CONVENIO', 'ID_TIPO_CONVENIO', 'ID_ESTADO_CONVENIO'], 'required'],
-            [['ID_CONVENIO', 'ID_TIPO_CONVENIO', 'ID_ESTADO_CONVENIO', 'NUMERO_DECRETO', 'VIGENCIA'], 'integer'],
-            [['FECHA_INICIO', 'FECHA_TERMINO', 'FECHA_FIRMA', 'FECHA_DECRETO'], 'safe'],
+            [['ID_CONVENIO', 'ID_ESTADO_CONVENIO'], 'required'],
+            [['ID_CONVENIO', 'ID_ESTADO_CONVENIO', 'NUMERO_DECRETO'], 'integer'],
+            [['FECHA_INICIO', 'FECHA_TERMINO','FECHA_DECRETO'], 'safe'],
             [['ID_COORDINADOR_CONVENIO'], 'string', 'max' => 20],
             [['NOMBRE_CONVENIO', 'DESCRIPCION'], 'string', 'max' => 500],
-            [['VIGENTE'], 'string', 'max' => 1],
             [['ID_ESTADO_CONVENIO'], 'exist', 'skipOnError' => true, 'targetClass' => CnvEstadoConvenio::className(), 'targetAttribute' => ['ID_ESTADO_CONVENIO' => 'ID_ESTADO_CONVENIO']],
             [['ID_COORDINADOR_CONVENIO'], 'exist', 'skipOnError' => true, 'targetClass' => CnvCoordinadorConvenio::className(), 'targetAttribute' => ['ID_COORDINADOR_CONVENIO' => 'ID_COORDINADOR_CONVENIO']],
         ];
@@ -61,18 +57,14 @@ class CnvConvenio extends \yii\db\ActiveRecord
     {
         return [
             'ID_CONVENIO' => 'Id  Convenio',
-            'ID_TIPO_CONVENIO' => 'Id  Tipo  Convenio',
             'ID_COORDINADOR_CONVENIO' => 'Id  Coordinador  Convenio',
             'ID_ESTADO_CONVENIO' => 'Id  Estado  Convenio',
             'NOMBRE_CONVENIO' => 'Nombre  Convenio',
             'FECHA_INICIO' => 'Fecha  Inicio',
             'FECHA_TERMINO' => 'Fecha  Termino',
-            'FECHA_FIRMA' => 'Fecha  Firma',
             'FECHA_DECRETO' => 'Fecha  Decreto',
             'NUMERO_DECRETO' => 'Numero  Decreto',
             'DESCRIPCION' => 'Descripcion',
-            'VIGENTE' => 'Vigente',
-            'VIGENCIA' => 'Vigencia',
         ];
     }
 

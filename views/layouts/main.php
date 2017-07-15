@@ -39,9 +39,9 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
+
             ['label' => 'About', 'url' => ['/site/about']],
-           // ['options'=>['class'=>'dropdown-header']],
-            ['label' => 'Actividad Convenio', 'url' => ['/actividad/index'],'visible'=>!Yii::$app->user->isGuest],
+
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
@@ -71,7 +71,7 @@ AppAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; Universidad de Macondo <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+      
     </div>
 </footer>
 
