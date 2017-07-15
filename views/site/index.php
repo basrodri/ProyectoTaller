@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'UM';
 ?>
 <div class="site-index">
 
@@ -14,6 +14,14 @@ $this->title = 'My Yii Application';
 
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
             </div>
+
+
+    <div class="jumbotron">
+        <h1>Bienvenido</h1>
+
+        <p class="lead">al módulo de convenios de la Universidad de Macondo.</p>
+    </div>
+
 
 
 
@@ -55,6 +63,7 @@ $this->title = 'My Yii Application';
 
 
         </div>
+
 
     </div>
 </div>
