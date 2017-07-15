@@ -1,9 +1,6 @@
 <?php
-
 namespace app\models;
-
 use Yii;
-
 /**
  * This is the model class for table "cnv_actividad_convenio".
  *
@@ -25,7 +22,6 @@ class CnvActividadConvenio extends \yii\db\ActiveRecord
     {
         return 'cnv_actividad_convenio';
     }
-
     /**
      * @inheritdoc
      */
@@ -33,14 +29,16 @@ class CnvActividadConvenio extends \yii\db\ActiveRecord
     {
         return [
             [['ID_CONVENIO'], 'required'],
+
+
             [['ID_ESTADO_ACTIVIDAD', 'ID_ACTIVIDAD_CONVENIO', 'ID_CONVENIO'], 'integer'],
+
             [['FECHA_INICIO', 'FECHA_FIN'], 'safe'],
             [['NOMBRE_ACTIVIDAD'], 'string', 'max' => 200],
             [['DESCRIPCION'], 'string', 'max' => 500],
             [['ID_CONVENIO'], 'exist', 'skipOnError' => true, 'targetClass' => CnvConvenio::className(), 'targetAttribute' => ['ID_CONVENIO' => 'ID_CONVENIO']],
         ];
     }
-
     /**
      * @inheritdoc
      */
@@ -55,7 +53,6 @@ class CnvActividadConvenio extends \yii\db\ActiveRecord
             'DESCRIPCION' => 'Descripcion',
         ];
     }
-
     /**
      * @return \yii\db\ActiveQuery
      */
