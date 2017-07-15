@@ -31,11 +31,17 @@ AppAsset::register($this);
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
+
+            ['label' => 'Home', 'url' => ['/site/index']],
+
+            ['label' => 'About', 'url' => ['/site/about']],
+
 
             Yii::$app->user->isGuest ? (
                 ['label' => 'Ingresar', 'url' => ['/site/login']]
