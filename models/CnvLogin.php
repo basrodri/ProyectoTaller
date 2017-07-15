@@ -7,12 +7,13 @@ use Yii;
 /**
  * This is the model class for table "cnv_login".
  *
- * @property string $IP_LOGIN
- * @property string $INICIO_LOGIN
- * @property string $FIN_LOGIN
- * @property integer $ID_LOGIN
+ * @property string $NOMBRE
+ * @property string $APELLIDO_PATERNO
+ * @property string $APELLIDO_MATERNO
  * @property string $RUT_USUARIO
- * @property integer $DV_USUARIO
+ * @property string $CONTRASEÑA
+ * @property integer $ROL
+ * @property integer $ID_USUARIO
  */
 class CnvLogin extends \yii\db\ActiveRecord
 {
@@ -30,11 +31,12 @@ class CnvLogin extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['INICIO_LOGIN', 'FIN_LOGIN'], 'safe'],
-            [['ID_LOGIN'], 'required'],
-            [['ID_LOGIN', 'DV_USUARIO'], 'integer'],
-            [['IP_LOGIN'], 'string', 'max' => 200],
-            [['RUT_USUARIO'], 'string', 'max' => 10],
+            [['RUT_USUARIO', 'ROL', 'ID_USUARIO'], 'required'],
+            [['ROL', 'ID_USUARIO'], 'integer'],
+            [['NOMBRE'], 'string', 'max' => 200],
+            [['APELLIDO_PATERNO', 'APELLIDO_MATERNO'], 'string', 'max' => 30],
+            [['RUT_USUARIO'], 'string', 'max' => 12],
+            [['CONTRASEÑA'], 'string', 'max' => 8],
         ];
     }
 
@@ -44,12 +46,13 @@ class CnvLogin extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'IP_LOGIN' => 'Ip  Login',
-            'INICIO_LOGIN' => 'Inicio  Login',
-            'FIN_LOGIN' => 'Fin  Login',
-            'ID_LOGIN' => 'Id  Login',
+            'NOMBRE' => 'Nombre',
+            'APELLIDO_PATERNO' => 'Apellido  Paterno',
+            'APELLIDO_MATERNO' => 'Apellido  Materno',
             'RUT_USUARIO' => 'Rut  Usuario',
-            'DV_USUARIO' => 'Dv  Usuario',
+            'CONTRASEÑA' => 'ContraseÑ A',
+            'ROL' => 'Rol',
+            'ID_USUARIO' => 'Id  Usuario',
         ];
     }
 }
