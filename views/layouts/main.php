@@ -28,7 +28,6 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'UBB',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -37,9 +36,7 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Inicio', 'url' => ['/site/index']],
-            ['label' => 'Sobre', 'url' => ['/site/about']],
-            ['label' => 'Contacto', 'url' => ['/site/contact']],
+
             Yii::$app->user->isGuest ? (
                 ['label' => 'Ingresar', 'url' => ['/site/login']]
             ) : (
@@ -67,9 +64,9 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; UBB <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+
+      
     </div>
 </footer>
 
